@@ -1,4 +1,4 @@
-let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';window.onload = () => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("i0skx").querySelectorAll( "[dataitem='true']" );
+let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';window.onload = () => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("isl8k").querySelectorAll( "[dataitem='true']" );
   data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
@@ -63,7 +63,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
     }
 
   
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};const onClickPaginationButton = (chunk) => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("i0skx").querySelectorAll( "[dataitem='true']" );
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};const onClickPaginationButton = (chunk) => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("isl8k").querySelectorAll( "[dataitem='true']" );
 [...subDataElements].forEach((element, index) => {
         if (index >= data.length - (chunk-1)*subDataElements.length) {
             subDataElements[index].style.display = 'none';
@@ -99,6 +99,4 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
    } catch (e) { console.log(e) };
         }
     })
-    }});}document.getElementById('i7ldz').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/projectinfo';}};
+    }});}
