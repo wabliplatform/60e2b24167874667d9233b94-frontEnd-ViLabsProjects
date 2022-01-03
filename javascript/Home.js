@@ -22,9 +22,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
       }
     });
     
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};document.getElementById('itv4s').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/projectinfo';}};document.getElementById('izny7').onclick = (event) => {
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};window.onload = () => {let projectId = window.location.pathname.replace('/Home/','');apiProjectApi.getproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); document.querySelector('[annotationname = ProjectImage]').src = response.body.query.ProjectImage ;document.querySelector('[annotationname = ProjectTitle]').textContent = response.body.query.ProjectTitle ;document.querySelector('[annotationname = ProjectDuration]').textContent = response.body.query.ProjectDuration ;}});};document.getElementById('izny7').onclick = (event) => {
     event.preventDefault();
     { location.href= '/projectinfo';}};document.getElementById('i8l2e').onclick = (event) => {
     event.preventDefault();
