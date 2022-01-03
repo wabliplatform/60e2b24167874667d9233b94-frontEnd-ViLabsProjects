@@ -8,8 +8,6 @@ Name | Type | Description | Notes
 **projectImage** | **String** |  | 
 **projectTitle** | **String** |  | 
 **projectDuration** | **Number** |  | 
-**projectStartDate** | **String** |  | 
-**projectEndDate** | **String** |  | 
 **projectAbstract** | **String** |  | 
 
 

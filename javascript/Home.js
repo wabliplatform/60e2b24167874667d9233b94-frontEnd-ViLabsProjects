@@ -18,7 +18,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           insideSubDataElement.textContent = data[data.length -i -1].ProjectDuration;
         }
        } catch (e) { console.log(e) };
-        
+        subDataElements[i].addEventListener('click',() => {{ location.href= '/projectinfo/'+data[data.length -i -1]._id+'';}} )
       }
     });
     
