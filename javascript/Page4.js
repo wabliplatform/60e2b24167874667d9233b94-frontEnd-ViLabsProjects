@@ -22,11 +22,6 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].ProjectAbstract;
         }
-       } catch (e) { console.log(e) };try { 
-        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'viewproject']");
-        if(insideSubDataElement !== null){
-          insideSubDataElement.textContent = data[data.length -i -1].viewproject;
-        }
        } catch (e) { console.log(e) };
         
       }
@@ -104,4 +99,6 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
    } catch (e) { console.log(e) };
         }
     })
-    }});}window.onload = () => {let projectId = window.location.pathname.replace('/Page4/','');apiProjectApi.getproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); document.querySelector('[annotationname = ProjectImage]').src = response.body.query.ProjectImage ;document.querySelector('[annotationname = ProjectTitle]').textContent = response.body.query.ProjectTitle ;document.querySelector('[annotationname = ProjectDuration]').textContent = response.body.query.ProjectDuration ;document.querySelector('[annotationname = ProjectAbstract]').textContent = response.body.query.ProjectAbstract ;}});};
+    }});}document.getElementById('i7ldz').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/projectinfo';}};
