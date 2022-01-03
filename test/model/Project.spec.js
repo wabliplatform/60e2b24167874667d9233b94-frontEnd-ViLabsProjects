@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property projectImage (base name: "ProjectImage")', function() {
+      // uncomment below and update the code to test the property projectImage
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
     it('should have the property projectTitle (base name: "ProjectTitle")', function() {
       // uncomment below and update the code to test the property projectTitle
       //var instance = new TempApi.Project();

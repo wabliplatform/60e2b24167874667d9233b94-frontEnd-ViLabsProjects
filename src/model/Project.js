@@ -22,15 +22,16 @@ class Project {
     /**
      * Constructs a new <code>Project</code>.
      * @alias module:model/Project
+     * @param projectImage {String} 
      * @param projectTitle {String} 
      * @param projectDuration {Number} 
      * @param projectStartDate {String} 
      * @param projectEndDate {String} 
      * @param projectAbstract {String} 
      */
-    constructor(projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract) { 
+    constructor(projectImage, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract) { 
         
-        Project.initialize(this, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract);
+        Project.initialize(this, projectImage, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract);
     }
 
     /**
@@ -38,7 +39,8 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract) { 
+    static initialize(obj, projectImage, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract) { 
+        obj['ProjectImage'] = projectImage;
         obj['ProjectTitle'] = projectTitle;
         obj['ProjectDuration'] = projectDuration;
         obj['ProjectStartDate'] = projectStartDate;
@@ -59,6 +61,9 @@ class Project {
 
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
+            }
+            if (data.hasOwnProperty('ProjectImage')) {
+                obj['ProjectImage'] = ApiClient.convertToType(data['ProjectImage'], 'String');
             }
             if (data.hasOwnProperty('ProjectTitle')) {
                 obj['ProjectTitle'] = ApiClient.convertToType(data['ProjectTitle'], 'String');
@@ -86,6 +91,11 @@ class Project {
  * @member {String} _id
  */
 Project.prototype['_id'] = undefined;
+
+/**
+ * @member {String} ProjectImage
+ */
+Project.prototype['ProjectImage'] = undefined;
 
 /**
  * @member {String} ProjectTitle
