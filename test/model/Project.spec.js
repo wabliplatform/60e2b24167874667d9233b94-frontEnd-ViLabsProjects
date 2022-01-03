@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property projectImage (base name: "ProjectImage")', function() {
-      // uncomment below and update the code to test the property projectImage
-      //var instance = new TempApi.Project();
-      //expect(instance).to.be();
-    });
-
     it('should have the property projectTitle (base name: "ProjectTitle")', function() {
       // uncomment below and update the code to test the property projectTitle
       //var instance = new TempApi.Project();
@@ -74,6 +68,24 @@
 
     it('should have the property projectDuration (base name: "ProjectDuration")', function() {
       // uncomment below and update the code to test the property projectDuration
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property grantAgreement (base name: "GrantAgreement")', function() {
+      // uncomment below and update the code to test the property grantAgreement
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property projectStartDate (base name: "ProjectStartDate")', function() {
+      // uncomment below and update the code to test the property projectStartDate
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property projectEndDate (base name: "ProjectEndDate")', function() {
+      // uncomment below and update the code to test the property projectEndDate
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
