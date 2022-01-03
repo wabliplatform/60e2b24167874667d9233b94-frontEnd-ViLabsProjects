@@ -99,6 +99,4 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
    } catch (e) { console.log(e) };
         }
     })
-    }});}document.getElementById('i7kfs').onclick = (event) => {
-    event.preventDefault();
-    { location.href= '/projectinfo';}};
+    }});}
