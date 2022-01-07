@@ -24,14 +24,11 @@ class Project {
      * @alias module:model/Project
      * @param projectImage {String} 
      * @param projectTitle {String} 
-     * @param projectDuration {Number} 
      * @param projectStartDate {String} 
-     * @param projectEndDate {String} 
-     * @param projectAbstract {String} 
      */
-    constructor(projectImage, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract) { 
+    constructor(projectImage, projectTitle, projectStartDate) { 
         
-        Project.initialize(this, projectImage, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract);
+        Project.initialize(this, projectImage, projectTitle, projectStartDate);
     }
 
     /**
@@ -39,13 +36,10 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectImage, projectTitle, projectDuration, projectStartDate, projectEndDate, projectAbstract) { 
+    static initialize(obj, projectImage, projectTitle, projectStartDate) { 
         obj['ProjectImage'] = projectImage;
         obj['ProjectTitle'] = projectTitle;
-        obj['ProjectDuration'] = projectDuration;
         obj['ProjectStartDate'] = projectStartDate;
-        obj['ProjectEndDate'] = projectEndDate;
-        obj['ProjectAbstract'] = projectAbstract;
     }
 
     /**
@@ -68,17 +62,8 @@ class Project {
             if (data.hasOwnProperty('ProjectTitle')) {
                 obj['ProjectTitle'] = ApiClient.convertToType(data['ProjectTitle'], 'String');
             }
-            if (data.hasOwnProperty('ProjectDuration')) {
-                obj['ProjectDuration'] = ApiClient.convertToType(data['ProjectDuration'], 'Number');
-            }
             if (data.hasOwnProperty('ProjectStartDate')) {
                 obj['ProjectStartDate'] = ApiClient.convertToType(data['ProjectStartDate'], 'String');
-            }
-            if (data.hasOwnProperty('ProjectEndDate')) {
-                obj['ProjectEndDate'] = ApiClient.convertToType(data['ProjectEndDate'], 'String');
-            }
-            if (data.hasOwnProperty('ProjectAbstract')) {
-                obj['ProjectAbstract'] = ApiClient.convertToType(data['ProjectAbstract'], 'String');
             }
         }
         return obj;
@@ -103,24 +88,9 @@ Project.prototype['ProjectImage'] = undefined;
 Project.prototype['ProjectTitle'] = undefined;
 
 /**
- * @member {Number} ProjectDuration
- */
-Project.prototype['ProjectDuration'] = undefined;
-
-/**
  * @member {String} ProjectStartDate
  */
 Project.prototype['ProjectStartDate'] = undefined;
-
-/**
- * @member {String} ProjectEndDate
- */
-Project.prototype['ProjectEndDate'] = undefined;
-
-/**
- * @member {String} ProjectAbstract
- */
-Project.prototype['ProjectAbstract'] = undefined;
 
 
 

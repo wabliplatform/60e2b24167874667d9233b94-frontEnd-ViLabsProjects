@@ -13,9 +13,9 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           insideSubDataElement.textContent = data[data.length -i -1].ProjectTitle;
         }
        } catch (e) { console.log(e) };try { 
-        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'ProjectDuration']");
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'ProjectStartDate']");
         if(insideSubDataElement !== null){
-          insideSubDataElement.textContent = data[data.length -i -1].ProjectDuration;
+          insideSubDataElement.textContent = data[data.length -i -1].ProjectStartDate;
         }
        } catch (e) { console.log(e) };
         subDataElements[i].addEventListener('click',() => {{ location.href= '/projectinfo/'+data[data.length -i -1]._id+'';}} )
