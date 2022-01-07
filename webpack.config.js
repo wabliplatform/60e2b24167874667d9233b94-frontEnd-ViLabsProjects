@@ -6,6 +6,7 @@ module.exports = {
 	'projectinfo' : './javascript/projectinfo.js',
 	'createproject' : './javascript/createproject.js',
 	'Page4' : './javascript/Page4.js',
+	'Page5' : './javascript/Page5.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),

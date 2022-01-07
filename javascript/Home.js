@@ -24,6 +24,10 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
     
     [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};document.getElementById('izny7').onclick = (event) => {
     event.preventDefault();
-    { location.href= '/projectinfo';}};document.getElementById('i8l2e').onclick = (event) => {
+    { location.href= '/Page5';}};document.getElementById('i8l2e').onclick = (event) => {
     event.preventDefault();
-    { location.href= '/projectinfo';}};
+    { location.href= '/Page5';}};document.getElementById('itnwx').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/Page5';}};document.getElementById('izhft').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/Page5';}};

@@ -24,11 +24,14 @@ class Project {
      * @alias module:model/Project
      * @param projectImage {String} 
      * @param projectTitle {String} 
+     * @param grantAgreement {String} 
      * @param projectStartDate {String} 
+     * @param projectEndDate {String} 
+     * @param projectAbstract {String} 
      */
-    constructor(projectImage, projectTitle, projectStartDate) { 
+    constructor(projectImage, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract) { 
         
-        Project.initialize(this, projectImage, projectTitle, projectStartDate);
+        Project.initialize(this, projectImage, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract);
     }
 
     /**
@@ -36,10 +39,13 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectImage, projectTitle, projectStartDate) { 
+    static initialize(obj, projectImage, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract) { 
         obj['ProjectImage'] = projectImage;
         obj['ProjectTitle'] = projectTitle;
+        obj['GrantAgreement'] = grantAgreement;
         obj['ProjectStartDate'] = projectStartDate;
+        obj['ProjectEndDate'] = projectEndDate;
+        obj['ProjectAbstract'] = projectAbstract;
     }
 
     /**
@@ -62,8 +68,17 @@ class Project {
             if (data.hasOwnProperty('ProjectTitle')) {
                 obj['ProjectTitle'] = ApiClient.convertToType(data['ProjectTitle'], 'String');
             }
+            if (data.hasOwnProperty('GrantAgreement')) {
+                obj['GrantAgreement'] = ApiClient.convertToType(data['GrantAgreement'], 'String');
+            }
             if (data.hasOwnProperty('ProjectStartDate')) {
                 obj['ProjectStartDate'] = ApiClient.convertToType(data['ProjectStartDate'], 'String');
+            }
+            if (data.hasOwnProperty('ProjectEndDate')) {
+                obj['ProjectEndDate'] = ApiClient.convertToType(data['ProjectEndDate'], 'String');
+            }
+            if (data.hasOwnProperty('ProjectAbstract')) {
+                obj['ProjectAbstract'] = ApiClient.convertToType(data['ProjectAbstract'], 'String');
             }
         }
         return obj;
@@ -88,9 +103,24 @@ Project.prototype['ProjectImage'] = undefined;
 Project.prototype['ProjectTitle'] = undefined;
 
 /**
+ * @member {String} GrantAgreement
+ */
+Project.prototype['GrantAgreement'] = undefined;
+
+/**
  * @member {String} ProjectStartDate
  */
 Project.prototype['ProjectStartDate'] = undefined;
+
+/**
+ * @member {String} ProjectEndDate
+ */
+Project.prototype['ProjectEndDate'] = undefined;
+
+/**
+ * @member {String} ProjectAbstract
+ */
+Project.prototype['ProjectAbstract'] = undefined;
 
 
 
