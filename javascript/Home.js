@@ -3,9 +3,9 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
     if(subDataElements.length > i)
       {
         try { 
-        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'ProjectImage']");
+        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'pimage']");
         if(insideSubDataElement !== null){
-          insideSubDataElement.src = data[data.length -i -1].ProjectImage;
+          insideSubDataElement.src = data[data.length -i -1].pimage;
         }
        } catch (e) { console.log(e) };try { 
         const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'ProjectTitle']");

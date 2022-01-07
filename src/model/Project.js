@@ -22,16 +22,16 @@ class Project {
     /**
      * Constructs a new <code>Project</code>.
      * @alias module:model/Project
-     * @param projectImage {String} 
      * @param projectTitle {String} 
      * @param grantAgreement {String} 
      * @param projectStartDate {String} 
      * @param projectEndDate {String} 
      * @param projectAbstract {String} 
+     * @param pimage {String} 
      */
-    constructor(projectImage, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract) { 
+    constructor(projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract, pimage) { 
         
-        Project.initialize(this, projectImage, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract);
+        Project.initialize(this, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract, pimage);
     }
 
     /**
@@ -39,13 +39,13 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectImage, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract) { 
-        obj['ProjectImage'] = projectImage;
+    static initialize(obj, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract, pimage) { 
         obj['ProjectTitle'] = projectTitle;
         obj['GrantAgreement'] = grantAgreement;
         obj['ProjectStartDate'] = projectStartDate;
         obj['ProjectEndDate'] = projectEndDate;
         obj['ProjectAbstract'] = projectAbstract;
+        obj['pimage'] = pimage;
     }
 
     /**
@@ -62,9 +62,6 @@ class Project {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
-            if (data.hasOwnProperty('ProjectImage')) {
-                obj['ProjectImage'] = ApiClient.convertToType(data['ProjectImage'], 'String');
-            }
             if (data.hasOwnProperty('ProjectTitle')) {
                 obj['ProjectTitle'] = ApiClient.convertToType(data['ProjectTitle'], 'String');
             }
@@ -80,6 +77,9 @@ class Project {
             if (data.hasOwnProperty('ProjectAbstract')) {
                 obj['ProjectAbstract'] = ApiClient.convertToType(data['ProjectAbstract'], 'String');
             }
+            if (data.hasOwnProperty('pimage')) {
+                obj['pimage'] = ApiClient.convertToType(data['pimage'], 'String');
+            }
         }
         return obj;
     }
@@ -91,11 +91,6 @@ class Project {
  * @member {String} _id
  */
 Project.prototype['_id'] = undefined;
-
-/**
- * @member {String} ProjectImage
- */
-Project.prototype['ProjectImage'] = undefined;
 
 /**
  * @member {String} ProjectTitle
@@ -121,6 +116,11 @@ Project.prototype['ProjectEndDate'] = undefined;
  * @member {String} ProjectAbstract
  */
 Project.prototype['ProjectAbstract'] = undefined;
+
+/**
+ * @member {String} pimage
+ */
+Project.prototype['pimage'] = undefined;
 
 
 
