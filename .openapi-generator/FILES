@@ -6,6 +6,9 @@ config.js
 docs/Project.md
 docs/ProjectApi.json
 docs/ProjectApi.md
+docs/Wp.md
+docs/WpApi.json
+docs/WpApi.md
 expressServer.js
 git_push.sh
 index.js
@@ -13,6 +16,8 @@ mocha.opts
 package.json
 src/ApiClient.js
 src/api/ProjectApi.js
+src/api/WpApi.js
 src/index.js
 src/model/Project.js
+src/model/Wp.js
 webpack.config.js

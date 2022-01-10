@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import OneOfwpstring from './OneOfwpstring';
 
 /**
  * The Project model module.
@@ -23,15 +24,11 @@ class Project {
      * Constructs a new <code>Project</code>.
      * @alias module:model/Project
      * @param projectTitle {String} 
-     * @param grantAgreement {String} 
-     * @param projectStartDate {String} 
-     * @param projectEndDate {String} 
-     * @param projectAbstract {String} 
-     * @param pimage {String} 
+     * @param wpproject {module:model/OneOfwpstring} 
      */
-    constructor(projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract, pimage) { 
+    constructor(projectTitle, wpproject) { 
         
-        Project.initialize(this, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract, pimage);
+        Project.initialize(this, projectTitle, wpproject);
     }
 
     /**
@@ -39,13 +36,9 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectTitle, grantAgreement, projectStartDate, projectEndDate, projectAbstract, pimage) { 
+    static initialize(obj, projectTitle, wpproject) { 
         obj['ProjectTitle'] = projectTitle;
-        obj['GrantAgreement'] = grantAgreement;
-        obj['ProjectStartDate'] = projectStartDate;
-        obj['ProjectEndDate'] = projectEndDate;
-        obj['ProjectAbstract'] = projectAbstract;
-        obj['pimage'] = pimage;
+        obj['wpproject'] = wpproject;
     }
 
     /**
@@ -65,20 +58,8 @@ class Project {
             if (data.hasOwnProperty('ProjectTitle')) {
                 obj['ProjectTitle'] = ApiClient.convertToType(data['ProjectTitle'], 'String');
             }
-            if (data.hasOwnProperty('GrantAgreement')) {
-                obj['GrantAgreement'] = ApiClient.convertToType(data['GrantAgreement'], 'String');
-            }
-            if (data.hasOwnProperty('ProjectStartDate')) {
-                obj['ProjectStartDate'] = ApiClient.convertToType(data['ProjectStartDate'], 'String');
-            }
-            if (data.hasOwnProperty('ProjectEndDate')) {
-                obj['ProjectEndDate'] = ApiClient.convertToType(data['ProjectEndDate'], 'String');
-            }
-            if (data.hasOwnProperty('ProjectAbstract')) {
-                obj['ProjectAbstract'] = ApiClient.convertToType(data['ProjectAbstract'], 'String');
-            }
-            if (data.hasOwnProperty('pimage')) {
-                obj['pimage'] = ApiClient.convertToType(data['pimage'], 'String');
+            if (data.hasOwnProperty('wpproject')) {
+                obj['wpproject'] = ApiClient.convertToType(data['wpproject'], OneOfwpstring);
             }
         }
         return obj;
@@ -98,29 +79,9 @@ Project.prototype['_id'] = undefined;
 Project.prototype['ProjectTitle'] = undefined;
 
 /**
- * @member {String} GrantAgreement
+ * @member {module:model/OneOfwpstring} wpproject
  */
-Project.prototype['GrantAgreement'] = undefined;
-
-/**
- * @member {String} ProjectStartDate
- */
-Project.prototype['ProjectStartDate'] = undefined;
-
-/**
- * @member {String} ProjectEndDate
- */
-Project.prototype['ProjectEndDate'] = undefined;
-
-/**
- * @member {String} ProjectAbstract
- */
-Project.prototype['ProjectAbstract'] = undefined;
-
-/**
- * @member {String} pimage
- */
-Project.prototype['pimage'] = undefined;
+Project.prototype['wpproject'] = undefined;
 
 
 

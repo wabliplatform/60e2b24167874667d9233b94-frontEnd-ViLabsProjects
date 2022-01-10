@@ -30,6 +30,10 @@ class ExpressServer {
 			this.app.get('/Page4/:id', (req, res) => res.sendFile(path.join(__dirname,'html','Page4.html')));
 			this.app.get('/Page5', (req, res) => res.sendFile(path.join(__dirname,'html','Page5.html')));
 			this.app.get('/Page5/:id', (req, res) => res.sendFile(path.join(__dirname,'html','Page5.html')));
+			this.app.get('/createwp', (req, res) => res.sendFile(path.join(__dirname,'html','createwp.html')));
+			this.app.get('/createwp/:id', (req, res) => res.sendFile(path.join(__dirname,'html','createwp.html')));
+			this.app.get('/Page7', (req, res) => res.sendFile(path.join(__dirname,'html','Page7.html')));
+			this.app.get('/Page7/:id', (req, res) => res.sendFile(path.join(__dirname,'html','Page7.html')));
 			
     }
   

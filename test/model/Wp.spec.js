@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new TempApi.Project();
+    instance = new TempApi.Wp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('Project', function() {
-    it('should create an instance of Project', function() {
-      // uncomment below and update the code to test Project
-      //var instane = new TempApi.Project();
-      //expect(instance).to.be.a(TempApi.Project);
+  describe('Wp', function() {
+    it('should create an instance of Wp', function() {
+      // uncomment below and update the code to test Wp
+      //var instane = new TempApi.Wp();
+      //expect(instance).to.be.a(TempApi.Wp);
     });
 
     it('should have the property id (base name: "_id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new TempApi.Project();
+      //var instance = new TempApi.Wp();
       //expect(instance).to.be();
     });
 
-    it('should have the property projectTitle (base name: "ProjectTitle")', function() {
-      // uncomment below and update the code to test the property projectTitle
-      //var instance = new TempApi.Project();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property wpproject (base name: "wpproject")', function() {
-      // uncomment below and update the code to test the property wpproject
-      //var instance = new TempApi.Project();
+    it('should have the property wpname (base name: "wpname")', function() {
+      // uncomment below and update the code to test the property wpname
+      //var instance = new TempApi.Wp();
       //expect(instance).to.be();
     });
 

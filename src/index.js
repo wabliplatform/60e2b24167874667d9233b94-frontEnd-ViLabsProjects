@@ -14,7 +14,9 @@
 
 import ApiClient from './ApiClient';
 import Project from './model/Project';
+import Wp from './model/Wp';
 import ProjectApi from './api/ProjectApi';
+import WpApi from './api/WpApi';
 
 
 /**
@@ -62,10 +64,22 @@ export {
     Project,
 
     /**
+     * The Wp model constructor.
+     * @property {module:model/Wp}
+     */
+    Wp,
+
+    /**
     * The ProjectApi service constructor.
     * @property {module:api/ProjectApi}
     */
-    ProjectApi
+    ProjectApi,
+
+    /**
+    * The WpApi service constructor.
+    * @property {module:api/WpApi}
+    */
+    WpApi
 };
 
 export default {
@@ -82,8 +96,20 @@ export default {
     Project,
 
     /**
+     * The Wp model constructor.
+     * @property {module:model/Wp}
+     */
+    Wp,
+
+    /**
     * The ProjectApi service constructor.
     * @property {module:api/ProjectApi}
     */
-    ProjectApi
+    ProjectApi,
+
+    /**
+    * The WpApi service constructor.
+    * @property {module:api/WpApi}
+    */
+    WpApi
 };
