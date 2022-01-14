@@ -1,5 +1,6 @@
 .babelrc
 .gitignore
+.openapi-generator-ignore
 .travis.yml
 README.md
 config.js
@@ -20,4 +21,8 @@ src/api/WpApi.js
 src/index.js
 src/model/Project.js
 src/model/Wp.js
+test/api/ProjectApi.spec.js
+test/api/WpApi.spec.js
+test/model/Project.spec.js
+test/model/Wp.spec.js
 webpack.config.js
