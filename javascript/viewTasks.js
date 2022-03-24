@@ -154,7 +154,24 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
       });
      location.href= '//' + transitionId;}};document.getElementById('igekz').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('iv0pcc').onclick = (event) => {
+    let taskId = window.location.pathname.replace('/viewTasks/','');
+      if(taskId === '/viewTasks' || taskId === ''){
+        let parentId = "";
+        const storedData = window.localStorage.getItem('data');
+        const newMap = new Map(JSON.parse(storedData));
+        newMap.forEach((value, key) => {
+          if (
+            document
+              .getElementById(key)
+              .contains(document.getElementById("igekz")) === true &&
+              document.getElementById(key).contains(document.getElementById(parentId)) === false
+          ) {
+            taskId = value._id;
+            parentId = key;
+          }
+        });
+      }
+    apiTaskApi.deletetask( taskId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('iv0pcc').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -211,7 +228,24 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
       });
      location.href= '//' + transitionId;}};document.getElementById('ia3n6k').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i38rcg').onclick = (event) => {
+    let taskId = window.location.pathname.replace('/viewTasks/','');
+      if(taskId === '/viewTasks' || taskId === ''){
+        let parentId = "";
+        const storedData = window.localStorage.getItem('data');
+        const newMap = new Map(JSON.parse(storedData));
+        newMap.forEach((value, key) => {
+          if (
+            document
+              .getElementById(key)
+              .contains(document.getElementById("ia3n6k")) === true &&
+              document.getElementById(key).contains(document.getElementById(parentId)) === false
+          ) {
+            taskId = value._id;
+            parentId = key;
+          }
+        });
+      }
+    apiTaskApi.deletetask( taskId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('i38rcg').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
