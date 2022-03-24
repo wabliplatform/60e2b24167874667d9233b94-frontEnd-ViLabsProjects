@@ -154,24 +154,7 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
       });
      location.href= '//' + transitionId;}};document.getElementById('igekz').onclick = (event) => {
     event.preventDefault();
-    let taskId = window.location.pathname.replace('/viewTasks/','');
-      if(taskId === '/viewTasks' || taskId === ''){
-        let parentId = "";
-        const storedData = window.localStorage.getItem('data');
-        const newMap = new Map(JSON.parse(storedData));
-        newMap.forEach((value, key) => {
-          if (
-            document
-              .getElementById(key)
-              .contains(document.getElementById("igekz")) === true &&
-              document.getElementById(key).contains(document.getElementById(parentId)) === false
-          ) {
-            taskId = value._id;
-            parentId = key;
-          }
-        });
-      }
-    apiTaskApi.deletetask( taskId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('iv0pcc').onclick = (event) => {
+    {  location.href= '/' ;}};document.getElementById('iv0pcc').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -228,24 +211,7 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
       });
      location.href= '//' + transitionId;}};document.getElementById('ia3n6k').onclick = (event) => {
     event.preventDefault();
-    let taskId = window.location.pathname.replace('/viewTasks/','');
-      if(taskId === '/viewTasks' || taskId === ''){
-        let parentId = "";
-        const storedData = window.localStorage.getItem('data');
-        const newMap = new Map(JSON.parse(storedData));
-        newMap.forEach((value, key) => {
-          if (
-            document
-              .getElementById(key)
-              .contains(document.getElementById("ia3n6k")) === true &&
-              document.getElementById(key).contains(document.getElementById(parentId)) === false
-          ) {
-            taskId = value._id;
-            parentId = key;
-          }
-        });
-      }
-    apiTaskApi.deletetask( taskId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('i38rcg').onclick = (event) => {
+    {  location.href= '/' ;}};document.getElementById('i38rcg').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -302,7 +268,24 @@ let apiTaskApi = new TempApi.TaskApi();import TempApi from '../src/index';docume
       });
      location.href= '//' + transitionId;}};document.getElementById('i7mprs').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};window.onload = () => {apiTaskApi.getAlltask((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i1r9f").querySelectorAll( "[dataitem='true']" )].filter(
+    let taskId = window.location.pathname.replace('/viewTasks/','');
+      if(taskId === '/viewTasks' || taskId === ''){
+        let parentId = "";
+        const storedData = window.localStorage.getItem('data');
+        const newMap = new Map(JSON.parse(storedData));
+        newMap.forEach((value, key) => {
+          if (
+            document
+              .getElementById(key)
+              .contains(document.getElementById("i7mprs")) === true &&
+              document.getElementById(key).contains(document.getElementById(parentId)) === false
+          ) {
+            taskId = value._id;
+            parentId = key;
+          }
+        });
+      }
+    apiTaskApi.deletetask( taskId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};window.onload = () => {apiTaskApi.getAlltask((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i1r9f").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();let chunk = 1;  data.forEach((item,i) => {
