@@ -142,24 +142,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
       });
      location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('iqlujs').onclick = (event) => {
     event.preventDefault();
-    let workpackageId = window.location.pathname.replace('/viewWorkpackages/','');
-      if(workpackageId === '/viewWorkpackages' || workpackageId === ''){
-        let parentId = "";
-        const storedData = window.localStorage.getItem('data');
-        const newMap = new Map(JSON.parse(storedData));
-        newMap.forEach((value, key) => {
-          if (
-            document
-              .getElementById(key)
-              .contains(document.getElementById("iqlujs")) === true &&
-              document.getElementById(key).contains(document.getElementById(parentId)) === false
-          ) {
-            workpackageId = value._id;
-            parentId = key;
-          }
-        });
-      }
-    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/viewWorkpackages' ;}}});};document.getElementById('igj1rh').onclick = (event) => {
+    {  location.href= '/viewWorkpackages' ;}};document.getElementById('igj1rh').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
