@@ -2,11 +2,19 @@ const path = require('path');
 
 module.exports = {
   entry: {
-	'Home' : './javascript/Home.js',
-	'projectinfo' : './javascript/projectinfo.js',
-	'createproject' : './javascript/createproject.js',
-	'Page5' : './javascript/Page5.js',
-	'createwp' : './javascript/createwp.js',
+	'homePage' : './javascript/homePage.js',
+	'createProject' : './javascript/createProject.js',
+	'updateProject' : './javascript/updateProject.js',
+	'viewProject' : './javascript/viewProject.js',
+	'createTask' : './javascript/createTask.js',
+	'updateTask' : './javascript/updateTask.js',
+	'viewTask' : './javascript/viewTask.js',
+	'viewTasks' : './javascript/viewTasks.js',
+	'createWorkpackage' : './javascript/createWorkpackage.js',
+	'updateWorkpackage' : './javascript/updateWorkpackage.js',
+	'createEmployee' : './javascript/createEmployee.js',
+	'viewEmployees' : './javascript/viewEmployees.js',
+	'viewWorkpackages' : './javascript/viewWorkpackages.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),

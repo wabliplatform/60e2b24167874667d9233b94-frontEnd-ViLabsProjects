@@ -5,13 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**projectTitle** | **String** |  | 
-**projectStartDate** | **String** |  | 
-**pimage** | **String** |  | 
-**projectDuration** | **Number** |  | 
-**grantAgreement** | **String** |  | 
-**projectEndDate** | **String** |  | 
-**projectAbstract** | **String** |  | 
-**wpproject** | [**OneOfwpstring**](OneOfwpstring.md) |  | 
+**pImage** | [**ProjectPImage**](ProjectPImage.md) |  | 
+**pTitle** | **String** |  | 
+**pStart** | **String** |  | 
+**pWebsite** | **String** |  | 
+**pEnd** | **String** |  | 
+**pDuration** | **String** |  | 
+**pGA** | **String** |  | 
+**pAbstract** | **String** |  | 
+**pDescription** | **String** |  | 
+**pWorkpackage** | [**[Workpackage]**](Workpackage.md) |  | 
 
 

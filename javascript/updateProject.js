@@ -1,0 +1,79 @@
+let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';document.getElementById('icaj').onclick = (event) => {
+    event.preventDefault();
+    {  location.href= '/' ;}};document.getElementById('i4jic').onclick = (event) => {
+    event.preventDefault();
+    {  location.href= '/' ;}};document.getElementById('ilshwy').onclick = (event) => {
+    event.preventDefault();
+    {  location.href= '/' ;}};
+ const uploadImage = async (event) => {
+        const file = event.target.files[0];
+        const base64 = await convertBase64(file);
+        return base64;
+      };const convertBase64 = (file) => {
+          return new Promise((resolve, reject) => {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+
+            fileReader.onload = () => {
+                resolve(fileReader.result);
+            };
+
+            fileReader.onerror = (error) => {
+                reject(error);
+            };
+          });
+        };
+document.getElementById('formFile').addEventListener("change", async(e) => {
+            let imageBase64 = await uploadImage(e);
+        document.getElementById('formFile').setAttribute('data-image-base64' ,imageBase64);
+        document.getElementById('formFile').setAttribute('name',e.target.files[0].name)
+        });
+$(
+      function () { $("#datepicker").datepicker({format: 'dd-mm-yyyy'}); }
+    );$(
+      function () { $("#datepicker-2").datepicker({format: 'dd-mm-yyyy'}); }
+    );const arrayib5cm3 = [];
+document.getElementById("iyjqci").onclick = event => {
+  event.preventDefault();
+  const select = document.getElementById("im1p3y")
+  arrayib5cm3.push({
+      value: select.value,
+      liValue: select.selectedOptions[0].textContent
+  });
+  select.value = "";
+  select.selectedIndex = 0;
+    let e=``;
+   for (let y=0; y<arrayib5cm3.length; y++)
+   {
+     e += `<li arrayvalue='${arrayib5cm3[y].value}'>${arrayib5cm3[y].liValue}</li>`;
+   }
+   document.getElementById("ixe5wc").innerHTML = e;
+};document.getElementById('i7w1n').onclick = (event) => {
+    event.preventDefault();
+    document.addEventListener('alignpUpdate', function(e) {
+  const advanceSelect = document.getElementById('i7w1n');
+  const selectedElement = advanceSelect.getAttribute('selected-element');
+  if (!selectedElement) return;
+  [...advanceSelect.querySelectorAll("[annotationname]")].forEach(
+    optionElement => {
+      if (optionElement.value === selectedElement)
+        optionElement.setAttribute("selected", true);
+    }
+  );
+});};window.onload = () => {let projectId = window.location.pathname.replace('/updateProject/','');apiProjectApi.getproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = pTitle]').value = response.body.query.pTitle; } catch (e) { console.log(e) };try { 
+      if(response.body.query.pImage !== undefined){
+        if(document.querySelector('[annotationname = pImage]').getAttribute('type') === 'file'){
+          document.querySelector('[annotationname = pImage]').setAttribute('data-image-base64',response.body.query.pImage.data);
+          let fileName = response.body.query.pImage.name;
+          let file = new File([response.body.query.pImage.data], fileName,{lastModified:new Date().getTime()}, 'utf-8');
+          let container = new DataTransfer();
+          container.items.add(file);
+
+          document.querySelector("[annotationname = pImage]").files = container.files;
+        }
+        else {
+          document.querySelector('[annotationname = pImage]').src = response.body.query.pImage.data ;
+        }
+        document.querySelector('[annotationname = pImage]').name = response.body.query.pImage.name ;
+      }
+       } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pWebsite]').value = response.body.query.pWebsite; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pStart]').value = response.body.query.pStart; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pEnd]').value = response.body.query.pEnd; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pDuration]').value = response.body.query.pDuration; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pGA]').value = response.body.query.pGA; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pAbstract]').value = response.body.query.pAbstract; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pDescription]').value = response.body.query.pDescription; } catch (e) { console.log(e) };window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));}});};

@@ -60,50 +60,62 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property projectTitle (base name: "ProjectTitle")', function() {
-      // uncomment below and update the code to test the property projectTitle
+    it('should have the property pImage (base name: "pImage")', function() {
+      // uncomment below and update the code to test the property pImage
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property projectStartDate (base name: "ProjectStartDate")', function() {
-      // uncomment below and update the code to test the property projectStartDate
+    it('should have the property pTitle (base name: "pTitle")', function() {
+      // uncomment below and update the code to test the property pTitle
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property pimage (base name: "pimage")', function() {
-      // uncomment below and update the code to test the property pimage
+    it('should have the property pStart (base name: "pStart")', function() {
+      // uncomment below and update the code to test the property pStart
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property projectDuration (base name: "ProjectDuration")', function() {
-      // uncomment below and update the code to test the property projectDuration
+    it('should have the property pWebsite (base name: "pWebsite")', function() {
+      // uncomment below and update the code to test the property pWebsite
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property grantAgreement (base name: "GrantAgreement")', function() {
-      // uncomment below and update the code to test the property grantAgreement
+    it('should have the property pEnd (base name: "pEnd")', function() {
+      // uncomment below and update the code to test the property pEnd
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property projectEndDate (base name: "ProjectEndDate")', function() {
-      // uncomment below and update the code to test the property projectEndDate
+    it('should have the property pDuration (base name: "pDuration")', function() {
+      // uncomment below and update the code to test the property pDuration
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property projectAbstract (base name: "ProjectAbstract")', function() {
-      // uncomment below and update the code to test the property projectAbstract
+    it('should have the property pGA (base name: "pGA")', function() {
+      // uncomment below and update the code to test the property pGA
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });
 
-    it('should have the property wpproject (base name: "wpproject")', function() {
-      // uncomment below and update the code to test the property wpproject
+    it('should have the property pAbstract (base name: "pAbstract")', function() {
+      // uncomment below and update the code to test the property pAbstract
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pDescription (base name: "pDescription")', function() {
+      // uncomment below and update the code to test the property pDescription
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pWorkpackage (base name: "pWorkpackage")', function() {
+      // uncomment below and update the code to test the property pWorkpackage
       //var instance = new TempApi.Project();
       //expect(instance).to.be();
     });

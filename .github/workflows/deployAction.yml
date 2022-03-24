@@ -15,5 +15,5 @@ jobs:
           port: ${{ secrets.WABLI_SERVER_SSH_PORT }}
           script: >-
             ./wabli-applications/deploy.sh -b main -d solid-spoon -r
-            https://github.com/wabliplatform/60e2b24167874667d9233b94-frontEnd-ViLabsProjects.git
-            -f 60e2b24167874667d9233b94-frontEnd-ViLabsProjects -p 3101
+            https://github.com/wabliplatform/60e2b24167874667d9233b94-frontEnd-VilabsProjects.git
+            -f 60e2b24167874667d9233b94-frontEnd-VilabsProjects -p 3101
