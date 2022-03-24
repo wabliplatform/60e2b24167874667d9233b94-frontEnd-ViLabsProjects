@@ -1,20 +1,20 @@
 let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';let apiEmployeeApi = new TempApi.EmployeeApi();let employee = new TempApi.Employee();document.getElementById('i8nj').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i6sjj').onclick = (event) => {
+    {  location.href= '/homePage' ;}};document.getElementById('i6sjj').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i4ual').onclick = (event) => {
+    {  location.href= '/createProject' ;}};document.getElementById('i4ual').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('iq041').onclick = (event) => {
+    {  location.href= '/createTask' ;}};document.getElementById('iq041').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ikvd4').onclick = (event) => {
+    {  location.href= '/createWorkpackage' ;}};document.getElementById('ikvd4').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i63k3').onclick = (event) => {
+    {  location.href= '/createEmployee' ;}};document.getElementById('i63k3').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('inokz').onclick = (event) => {
+    {  location.href= '/viewTasks' ;}};document.getElementById('inokz').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('izpik').onclick = (event) => {
+    {  location.href= '/viewEmployees' ;}};document.getElementById('izpik').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};
+    {  location.href= '/viewWorkpackages' ;}};
  const uploadImage = async (event) => {
         const file = event.target.files[0];
         const base64 = await convertBase64(file);
@@ -76,17 +76,11 @@ document.getElementById("i5zsp").onclick = event => {
   );
 });document.getElementById('i1wf6').onclick = (event) => {
     event.preventDefault();
-    document.addEventListener('aligneCreate', function(e) {
-  const advanceSelect = document.getElementById('i1wf6');
-  const selectedElement = advanceSelect.getAttribute('selected-element');
-  if (!selectedElement) return;
-  [...advanceSelect.querySelectorAll("[annotationname]")].forEach(
-    optionElement => {
-      if (optionElement.value === selectedElement)
-        optionElement.setAttribute("selected", true);
-    }
-  );
-});};window.onload = () => {document.addEventListener('alignpGetAll', function(e) {
+    employee['eName'] = document.querySelector("[annotationname = 'eName']").value;employee['eSurname'] = document.querySelector("[annotationname = 'eSurname']").value;employee['eImage'] = {
+        data: document.querySelector("[annotationname = 'eImage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'eImage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'eImage']").src,
+        name: document.querySelector("[annotationname = 'eImage']").getAttribute("name")
+      };
+      employee["eProject"] = [...document.querySelector("[annotationname = 'eProject']").querySelectorAll("[arrayvalue]")].map(li=> li.getAttribute('arrayvalue'));apiEmployeeApi.createemployee( employee, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {  location.href= '/viewEmployees/'+response.body.query._id+'' ;}}});};window.onload = () => {document.addEventListener('alignpGetAll', function(e) {
   const advanceSelect = document.getElementById('i3ffa');
   const selectedElement = advanceSelect.getAttribute('selected-element');
   if (!selectedElement) return;

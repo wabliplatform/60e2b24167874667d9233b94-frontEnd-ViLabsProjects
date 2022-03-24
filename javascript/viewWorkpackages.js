@@ -1,18 +1,18 @@
 let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src/index';document.getElementById('i3hm').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('iuegv').onclick = (event) => {
+    {  location.href= '/homePage' ;}};document.getElementById('iuegv').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i0us1').onclick = (event) => {
+    {  location.href= '/createProject' ;}};document.getElementById('i0us1').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('iaw4g').onclick = (event) => {
+    {  location.href= '/createTask' ;}};document.getElementById('iaw4g').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ika04e').onclick = (event) => {
+    {  location.href= '/createWorkpackage' ;}};document.getElementById('ika04e').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('in69a').onclick = (event) => {
+    {  location.href= '/createEmployee' ;}};document.getElementById('in69a').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ilqkve').onclick = (event) => {
+    {  location.href= '/viewTasks' ;}};document.getElementById('ilqkve').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};const onClickPaginationButton = (chunk, pagination) => {
+    {  location.href= '/viewEmployees' ;}};const onClickPaginationButton = (chunk, pagination) => {
     for (let i = 0; i < pagination.children.length; i++) {
       if (
         pagination.children[i].classList.value.includes("active") === true
@@ -140,7 +140,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('iqlujs').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('iqlujs').onclick = (event) => {
     event.preventDefault();
     let workpackageId = window.location.pathname.replace('/viewWorkpackages/','');
       if(workpackageId === '/viewWorkpackages' || workpackageId === ''){
@@ -159,7 +159,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           }
         });
       }
-    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('igj1rh').onclick = (event) => {
+    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/viewWorkpackages' ;}}});};document.getElementById('igj1rh').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -177,7 +177,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('ibnwin').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('ibnwin').onclick = (event) => {
     event.preventDefault();
     let workpackageId = window.location.pathname.replace('/viewWorkpackages/','');
       if(workpackageId === '/viewWorkpackages' || workpackageId === ''){
@@ -196,7 +196,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           }
         });
       }
-    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('i6q1e6').onclick = (event) => {
+    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/viewWorkpackages' ;}}});};document.getElementById('i6q1e6').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -214,7 +214,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('i6mb6g').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('i6mb6g').onclick = (event) => {
     event.preventDefault();
     let workpackageId = window.location.pathname.replace('/viewWorkpackages/','');
       if(workpackageId === '/viewWorkpackages' || workpackageId === ''){
@@ -233,7 +233,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           }
         });
       }
-    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('iqgopb').onclick = (event) => {
+    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/viewWorkpackages' ;}}});};document.getElementById('iqgopb').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -251,7 +251,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('ij69sy').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('ij69sy').onclick = (event) => {
     event.preventDefault();
     let workpackageId = window.location.pathname.replace('/viewWorkpackages/','');
       if(workpackageId === '/viewWorkpackages' || workpackageId === ''){
@@ -270,7 +270,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           }
         });
       }
-    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('i2ni3').onclick = (event) => {
+    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/viewWorkpackages' ;}}});};document.getElementById('i2ni3').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -288,7 +288,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('iyge54').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('iyge54').onclick = (event) => {
     event.preventDefault();
     let workpackageId = window.location.pathname.replace('/viewWorkpackages/','');
       if(workpackageId === '/viewWorkpackages' || workpackageId === ''){
@@ -307,7 +307,7 @@ let apiWorkpackageApi = new TempApi.WorkpackageApi();import TempApi from '../src
           }
         });
       }
-    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};window.onload = () => {apiWorkpackageApi.getAllworkpackage((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i1r9f").querySelectorAll( "[dataitem='true']" )].filter(
+    apiWorkpackageApi.deleteworkpackage( workpackageId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/viewWorkpackages' ;}}});};window.onload = () => {apiWorkpackageApi.getAllworkpackage((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i1r9f").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();let chunk = 1;  data.forEach((item,i) => {

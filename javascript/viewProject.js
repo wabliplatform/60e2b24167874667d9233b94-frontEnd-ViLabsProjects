@@ -1,20 +1,20 @@
 let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';document.getElementById('ispb3').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i6xm8').onclick = (event) => {
+    {  location.href= '/homePage' ;}};document.getElementById('i6xm8').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('iqfcn').onclick = (event) => {
+    {  location.href= '/createProject' ;}};document.getElementById('iqfcn').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('idrsd').onclick = (event) => {
+    {  location.href= '/createTask' ;}};document.getElementById('idrsd').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ikbv9q').onclick = (event) => {
+    {  location.href= '/createWorkpackage' ;}};document.getElementById('ikbv9q').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('idm74').onclick = (event) => {
+    {  location.href= '/createEmployee' ;}};document.getElementById('idm74').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ikfv9f').onclick = (event) => {
+    {  location.href= '/viewTasks' ;}};document.getElementById('ikfv9f').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i4cnb1').onclick = (event) => {
+    {  location.href= '/viewEmployees' ;}};document.getElementById('i4cnb1').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i6xxi').onclick = (event) => {
+    {  location.href= '/viewWorkpackages' ;}};document.getElementById('i6xxi').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -32,7 +32,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('i1dct5').onclick = (event) => {
+     location.href= '/updateProject/' + transitionId;}};document.getElementById('i1dct5').onclick = (event) => {
     event.preventDefault();
     let projectId = window.location.pathname.replace('/viewProject/','');
       if(projectId === '/viewProject' || projectId === ''){
@@ -51,7 +51,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           }
         });
       }
-    apiProjectApi.deleteproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/' ;}}});};document.getElementById('iquq4i').onclick = (event) => {
+    apiProjectApi.deleteproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{  location.href= '/homePage' ;}}});};document.getElementById('iquq4i').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -69,7 +69,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('iw2x82').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('iw2x82').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -87,7 +87,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('ibg5na').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('ibg5na').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -105,7 +105,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('ixskws').onclick = (event) => {
+     location.href= '/updateWorkpackage/' + transitionId;}};document.getElementById('ixskws').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -123,7 +123,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};window.onload = () => {let projectId = window.location.pathname.replace('/viewProject/','');apiProjectApi.getproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = pTitle]').textContent = response.body.query.pTitle; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pWebsite]').textContent = response.body.query.pWebsite; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pGA]').textContent = response.body.query.pGA; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pStart]').textContent = response.body.query.pStart; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pEnd]').textContent = response.body.query.pEnd; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pDuration]').textContent = response.body.query.pDuration; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pAbstract]').textContent = response.body.query.pAbstract; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pDescription]').textContent = response.body.query.pDescription; } catch (e) { console.log(e) };try { 
+     location.href= '/updateWorkpackage/' + transitionId;}};window.onload = () => {let projectId = window.location.pathname.replace('/viewProject/','');apiProjectApi.getproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = pTitle]').textContent = response.body.query.pTitle; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pWebsite]').textContent = response.body.query.pWebsite; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pGA]').textContent = response.body.query.pGA; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pStart]').textContent = response.body.query.pStart; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pEnd]').textContent = response.body.query.pEnd; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pDuration]').textContent = response.body.query.pDuration; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pAbstract]').textContent = response.body.query.pAbstract; } catch (e) { console.log(e) };try { document.querySelector('[annotationname = pDescription]').textContent = response.body.query.pDescription; } catch (e) { console.log(e) };try { 
       if(response.body.query.pImage !== undefined){
         if(document.querySelector('[annotationname = pImage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = pImage]').setAttribute('data-image-base64',response.body.query.pImage.data);
