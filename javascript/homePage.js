@@ -1,18 +1,18 @@
 let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';document.getElementById('iejuy').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ioqnf').onclick = (event) => {
+    {  location.href= '/createProject' ;}};document.getElementById('ioqnf').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ia3qv').onclick = (event) => {
+    {  location.href= '/createTask' ;}};document.getElementById('ia3qv').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ind7lk').onclick = (event) => {
+    {  location.href= '/createWorkpackage' ;}};document.getElementById('ind7lk').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('i4k1k').onclick = (event) => {
+    {  location.href= '/createEmployee' ;}};document.getElementById('i4k1k').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('iayqah').onclick = (event) => {
+    {  location.href= '/viewTasks' ;}};document.getElementById('iayqah').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};document.getElementById('ip0cml').onclick = (event) => {
+    {  location.href= '/viewEmployees' ;}};document.getElementById('ip0cml').onclick = (event) => {
     event.preventDefault();
-    {  location.href= '/' ;}};const onClickPaginationButton = (chunk, pagination) => {
+    {  location.href= '/viewWorkpackages' ;}};const onClickPaginationButton = (chunk, pagination) => {
     for (let i = 0; i < pagination.children.length; i++) {
       if (
         pagination.children[i].classList.value.includes("active") === true
@@ -140,7 +140,7 @@ else if(subDataElements[i-(chunk-1) *subDataElements.length].getAttribute('annot
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('i3ljrc').onclick = (event) => {
+     location.href= '/viewProject/' + transitionId;}};document.getElementById('i3ljrc').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -158,7 +158,7 @@ else if(subDataElements[i-(chunk-1) *subDataElements.length].getAttribute('annot
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('it26a').onclick = (event) => {
+     location.href= '/viewProject/' + transitionId;}};document.getElementById('it26a').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -176,7 +176,7 @@ else if(subDataElements[i-(chunk-1) *subDataElements.length].getAttribute('annot
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('ilc3d').onclick = (event) => {
+     location.href= '/viewProject/' + transitionId;}};document.getElementById('ilc3d').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -194,7 +194,7 @@ else if(subDataElements[i-(chunk-1) *subDataElements.length].getAttribute('annot
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('if314').onclick = (event) => {
+     location.href= '/viewProject/' + transitionId;}};document.getElementById('if314').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -212,7 +212,7 @@ else if(subDataElements[i-(chunk-1) *subDataElements.length].getAttribute('annot
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};document.getElementById('i3ovk').onclick = (event) => {
+     location.href= '/viewProject/' + transitionId;}};document.getElementById('i3ovk').onclick = (event) => {
     event.preventDefault();
     { 
       let transitionId = window.location.href.split('/').at(-1);
@@ -230,7 +230,7 @@ else if(subDataElements[i-(chunk-1) *subDataElements.length].getAttribute('annot
           parentId = key;
         }
       });
-     location.href= '//' + transitionId;}};window.onload = () => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i10ef").querySelectorAll( "[dataitem='true']" )].filter(
+     location.href= '/viewProject/' + transitionId;}};window.onload = () => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i10ef").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();let chunk = 1;  data.forEach((item,i) => {
